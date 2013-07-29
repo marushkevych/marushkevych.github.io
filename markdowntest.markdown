@@ -1,3 +1,8 @@
+---
+layout: post
+title: Test
+---
+
 ## this is markdown test
 
 1. one
