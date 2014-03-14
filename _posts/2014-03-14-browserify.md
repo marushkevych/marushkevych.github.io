@@ -2,7 +2,7 @@
 layout: post
 title:  "Browserify!"
 date:   2014-03-14 17:00:00
-categories: javascript npm maven angularjs
+categories: javascript
 ---
 
 Last few days I was trying to come up wiht easiest way to manage packages and dependencies in AngularJS projects. 
