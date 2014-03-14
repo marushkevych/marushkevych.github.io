@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Test"
+title:  "My new test"
 date:   2014-03-13 22:35:08
 categories:
 ---
