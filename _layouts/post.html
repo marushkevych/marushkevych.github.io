@@ -5,5 +5,12 @@ layout: default
 <p class="meta">{{ page.date | date_to_string }}</p>
 
 <div class="post">
-{{ content }}
+    {{ content }}
 </div>
+<p>
+    <i class="fa fa-folder-open-o"></i> Categories
+<ul class="fa-ul">
+    {% assign categories_list = page.categories %}
+    {% include JB/categories_list %}
+</ul>
+</p>
