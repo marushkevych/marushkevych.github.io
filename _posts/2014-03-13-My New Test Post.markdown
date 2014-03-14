@@ -1,0 +1,16 @@
+---
+layout: post
+title:  "Test"
+date:   2014-03-13 22:35:08
+categories:
+---
+
+This is my test post content.
+`this is one type of matrdown`
+
+``` thus is code ````
+
+__werwerwrwe__
+
+_wrwrwe_
+
