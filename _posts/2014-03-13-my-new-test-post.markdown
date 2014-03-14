@@ -2,7 +2,7 @@
 layout: post
 title:  "My new test"
 date:   2014-03-13 22:35:08
-categories:
+categories: baby tets
 ---
 
 This is my test post content.
