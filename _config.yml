@@ -1,5 +1,7 @@
 exclude:     [nbproject]
 
+permalink: /:year/:month/:day/:title.html
+
 author :
   name : Andrey Marushkevych
   email : marushkevych@gmail.com
