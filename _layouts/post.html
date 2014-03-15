@@ -6,10 +6,14 @@ layout: default
 <div class="post">
     {{ content }}
 </div>
-<p>
     <i class="fa fa-folder-open-o"></i> Categories
 <ul class="fa-ul">
-    {% assign categories_list = page.categories %}
-    {% include JB/categories_list %}
+    {% for category in page.categories %}
+    <li>
+        <i class="fa fa-folder-o"></i>
+        <a href="/categories.html#{{ category }}-ref">
+            {{ category }}
+        </a>
+    </li>
+    {% endfor %}
 </ul>
-</p>
