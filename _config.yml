@@ -1,5 +1,5 @@
 exclude:     [nbproject]
-include: ['pages']
+include: [pages]
 
 markdown: redcarpet
 
