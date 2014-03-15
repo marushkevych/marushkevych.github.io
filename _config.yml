@@ -1,5 +1,7 @@
 exclude:     [nbproject]
 
+markdown: redcarpet
+
 permalink: /:year/:month/:day/:title.html
 
 author :

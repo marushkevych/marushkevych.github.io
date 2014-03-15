@@ -11,15 +11,22 @@ not only blog entries. Simply add a file with  `.md` extention and Jekyll will g
 
 The best way to start is to generate example site with `jekyll new` command.
 
-Jekyll also offers powerful support for code snippets:
+To run site locally, the way github would, use this command: `bundle exec jekyll serve -w`
 
-{% highlight ruby %}
+As of Jekyll >= 0.12.1 redcarpet2 is natively supported by Jekyll, so you can simply set your config to 
+`markdown: redcarpet` and you are good to go with GFM / fenced  code blocks like 
+\`\`\`ruby 
+instead of `{{ "{% highlight ruby " }}%}` liquid tags:
+
+```ruby
 def print_hi(name)
   puts "Hi, #{name}"
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+```
+
+See [github flavored markdown](https://help.github.com/articles/github-flavored-markdown)
 
 Check out the [Jekyll docs][jekyll] for more info. 
 
