@@ -8,5 +8,5 @@ categories: github
 Fenced code blocks inside ordered and unordered lists are tricky.
 [Here](https://gist.github.com/clintel/1155906) is how to do it:
 
-* indent your fenced block by (4 * bullet_indent_level) spaces
+* indent your fenced block by (4 * bullet indent level) spaces
 * put a separating newline above and below the fenced block
