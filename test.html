@@ -1,0 +1,43 @@
+---
+layout: page
+title: Test
+---
+
+
+
+<input id="button" type="submit" value="Go" />
+
+<script>
+    $(function() {
+//            $.support.cors = true;
+
+        $('#button').click(function() {
+            
+            
+            $.ajax({
+                url: 'https://api.mongolab.com/api/1/databases/anahata/collections/test?apiKey=BwoStt43lq1ZC8KYVQpmd6ILyVVAqxOn',
+                data: JSON.stringify({"name" : "Foo" , "needRide" : true}),
+                type: "POST",
+                contentType: "application/json",
+                success: function(data) {
+                    console.log(data);
+                    $.ajax({
+                        url: 'https://api.mongolab.com/api/1/databases/anahata/collections/test?apiKey=BwoStt43lq1ZC8KYVQpmd6ILyVVAqxOn',
+                        type: 'GET',
+                        success: function(data) {
+                            console.log(data);
+                        },
+                        error: function(error) {
+                            console.log(error);
+                        }
+                    });
+                },
+                error: function(error) {
+                    console.log(error);
+                }
+            });
+            
+            
+        });
+    });
+</script>
