@@ -30,4 +30,6 @@ See [github flavored markdown](https://help.github.com/articles/github-flavored-
 
 Check out the [Jekyll docs][jekyll] for more info. 
 
+Another good Jekyll tutorial: [Jekyll By Example](https://www.andrewmunsell.com/tutorials/jekyll-by-example)
+
 [jekyll]:    http://jekyllrb.com
