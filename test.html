@@ -26,16 +26,17 @@ title: Test
 //                    console.log(error);
 //                }
 //            });
-            
+            $.support.cors = true;
             $.ajax({
 //                url: 'https://api.mongolab.com/api/1/databases/anahata/collections/test?apiKey=BwoStt43lq1ZC8KYVQpmd6ILyVVAqxOn',
-                url: 'http://nodejs-marushkevych.rhcloud.com/comments',
+                url: 'https://nodejs-marushkevych.rhcloud.com/comments',
                 type: 'GET',
                 success: function(data) {
-                    console.log(data);
+                    console.log('success:', data);
                 },
-                error: function(error) {
-                    console.log(error);
+                error: function(req, status, err) {
+                    console.log('error:', req, status, err);
+
                 }
             });
             
