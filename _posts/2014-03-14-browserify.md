@@ -15,3 +15,18 @@ Here is what I'm going to try:
 - use browserify to import those packages in angular project
 
 Also [here](https://groups.google.com/forum/#!starred/angular/ytoVaikOcCs) is interesting approach to decoupling from angular modules.
+
+Yet a better way to decauple is to declare compomemts as pure funcrions:
+
+```js
+function PhoneListCtrl($scope, $http) {...}
+PhoneListCtrl.$inject = ['$scope', '$http'];
+module.exports.PhoneListCtrl = PhoneListCtrl;
+```
+
+And then later
+
+```js
+var PhoneListCtrl = require('PhoneListCtrl');
+App.controller('PhoneListCtrl', PhoneListCtrl);
+```
