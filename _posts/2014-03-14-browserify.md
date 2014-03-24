@@ -16,7 +16,7 @@ Here is what I'm going to try:
 
 Also [here](https://groups.google.com/forum/#!starred/angular/ytoVaikOcCs) is interesting approach to decoupling from angular modules.
 
-Yet a better way to decauple is to declare compomemts as pure funcrions:
+Yet a better way to decouple is to declare components as pure functions:
 
 ```js
 function PhoneListCtrl($scope, $http) {...}
