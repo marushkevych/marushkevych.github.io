@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Refreshing angularjs app with html5 mode running with connect
+title:  Handling angularjs html5Mode with grunt connect
 date:   2014-03-27 1:00:00
 categories: angularjs
 ---
