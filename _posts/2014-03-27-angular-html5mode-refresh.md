@@ -14,7 +14,7 @@ Here is how to enable this with `grunt connect`:
 #### Install `connect-modrewrite` with
 
 ```
-npm install connect-modrewrite --save
+npm install connect-modrewrite --save-dev
 ```
 
 #### Grunt config:
