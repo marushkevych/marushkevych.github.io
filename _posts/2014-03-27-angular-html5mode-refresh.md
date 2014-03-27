@@ -44,5 +44,9 @@ grunt.initConfig({
         }
     }
 });
+
+grunt.loadNpmTasks('grunt-contrib-connect');
+grunt.registerTask('server', ['connect:server']);
+
 };
 ```
