@@ -28,7 +28,7 @@ var mountFolder = function (connect, dir) {
 module.exports = function(grunt) {
 grunt.initConfig({
     connect: {
-         options: {
+        options: {
             port: 8000,
             hostname: 'localhost',
         },
