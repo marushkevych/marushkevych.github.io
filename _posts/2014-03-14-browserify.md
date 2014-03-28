@@ -10,11 +10,15 @@ I discovered [Browserify](http://browserify.org) and its awesome cause it allows
 
 Here is what I'm going to try:
 
-- use [grunt-maven-tasks](https://www.npmjs.org/package/grunt-maven-tasks) to publish JS packages to maven
-- use npm to install packages from maven
-- use browserify to import those packages in angular project
+1. use [grunt-maven-tasks](https://www.npmjs.org/package/grunt-maven-tasks) to publish JS packages to maven
+2. use npm to install packages from maven
+3. use browserify to import those packages in angular project
 
-Also [here](https://groups.google.com/forum/#!starred/angular/ytoVaikOcCs) is interesting approach to decoupling from angular modules.
+## Here is some notes on browserify
+- [AngularJS, Browserify and Grunt](http://dontkry.com/posts/code/angular-browserify-grunt.html)
+
+## Decoupling from angular modules
+[Here](https://groups.google.com/forum/#!starred/angular/ytoVaikOcCs) is interesting approach to decoupling from angular modules.
 
 Yet a better way to decouple is to declare components as pure functions:
 
