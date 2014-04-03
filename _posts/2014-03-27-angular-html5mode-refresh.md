@@ -50,3 +50,5 @@ module.exports = function(grunt) {
 
 };
 ```
+
+See this [discussion](https://github.com/yeoman/generator-angular/pull/132#issuecomment-15651864) for more info
