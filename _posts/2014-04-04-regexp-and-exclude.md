@@ -5,7 +5,7 @@ date:   2014-04-04 10:00:00
 categories: angularjs javascript regexp
 ---
 
-In my [previous](/2014/03/26/angular-html5mode-refresh.html) post i mentioned connect-modrewrite middleware, 
+In my [previous](/2014/03/26/angular-html5mode-refresh) post i mentioned connect-modrewrite middleware, 
 which can be used to enable live reload of angular app. When I was trying to implement regexp for modrewrite, 
 I found it was really challenging to have regular expression with exclusions and "and" conditions.
 
