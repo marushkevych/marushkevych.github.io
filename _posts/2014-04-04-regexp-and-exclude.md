@@ -14,7 +14,7 @@ Here is the example: Say you need to configure rewrite rule for all request star
 and not containing `.js` extention:
 
 ```js
-// starting with /fr and containing .js
+// starting with /fr and not containing .js
 ```
 
 So the way to do it is to create invert refular expression
