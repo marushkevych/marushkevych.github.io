@@ -17,7 +17,7 @@ and not containing `.js` extention:
 // starting with /fr and not containing .js
 ```
 
-So the way to do it is to create invert refular expression
+So the way to do it is to create inverted regular expression
 
 ```js
 // not starting with /fr or containing .js
