@@ -9,7 +9,7 @@ In my [previous](/2014/03/26/angular-html5mode-refresh.html) post i mentioned co
 which can be used to enable live reload of angular app. When I was trying to implement regexp for modrewrite, 
 I found it was really challenging to have regular expression with exclusions and "and" conditions.
 
-The solution is to use inverted conditions and the negate the whole expression.
+The solution is to use inverted conditions and then negate the whole expression.
 Here is the example: Say you need to configure rewrite rule for all request starting with `/fr`
 and not containing `.js` extension:
 
