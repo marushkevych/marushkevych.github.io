@@ -19,7 +19,7 @@ So the way to do it is to create invert refular expression
 "^/(?!fr)|\\.js$"
 ```
 
-ANd then negate it in the modrewrite rule:
+And then negate it in the modrewrite rule:
 
 ```js
 modRewrite([
