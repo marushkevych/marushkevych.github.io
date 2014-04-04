@@ -4,7 +4,6 @@ title:  Regular Expressions with exclusions and "and" conditions
 date:   2014-04-04 10:00:00
 categories: angularjs javascript regexp
 ---
-
 In my [previous](/2014/03/26/angular-html5mode-refresh.html) post i mentioned connect-modrewrite middleware, 
 which can be use to handle browser refresh button in angular app. When I was trying to implement regexp for modrewrite, 
 I foung it was really challenging to have regular expression with exclusions and "and" conditions.
