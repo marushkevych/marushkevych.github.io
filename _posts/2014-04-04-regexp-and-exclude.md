@@ -11,11 +11,16 @@ I foung it was really challenging to have regular expression with exclusions and
 
 The solution is to use inverted conditions and the negate the whole expression.
 Here is the example: Say you need to configure rewrite rule for all request starting with `/fr`
-and not containing `.js` extention.
+and not containing `.js` extention:
+
+```js
+// starting with /fr and containing .js
+```
+
 So the way to do it is to create invert refular expression
 
 ```js
-// not starting wiht /fr or containing .js
+// not starting with /fr or containing .js
 "^/(?!fr)|\\.js$"
 ```
 
