@@ -25,7 +25,7 @@ Yet a better way to decouple is to declare components as pure functions:
 ```js
 function PhoneListCtrl($scope, $http) {...}
 PhoneListCtrl.$inject = ['$scope', '$http'];
-module.exports.PhoneListCtrl = PhoneListCtrl;
+module.exports = PhoneListCtrl;
 ```
 
 And then later
