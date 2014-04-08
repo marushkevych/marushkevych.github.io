@@ -22,15 +22,17 @@ Here is what I'm going to try:
 
 Yet a better way to decouple is to declare components as pure functions:
 
-```js
-function PhoneListCtrl($scope, $http) {...}
-PhoneListCtrl.$inject = ['$scope', '$http'];
+```js 
+// PhoneListCtrl.js
 module.exports = PhoneListCtrl;
+PhoneListCtrl.$inject = ['$scope', '$http'];
+function PhoneListCtrl($scope, $http) {
+    // controller logic here
+}
 ```
 
 And then later
 
 ```js
-var PhoneListCtrl = require('PhoneListCtrl');
-App.controller('PhoneListCtrl', PhoneListCtrl);
+App.controller('PhoneListCtrl', require('./PhoneListCtrl'));
 ```
