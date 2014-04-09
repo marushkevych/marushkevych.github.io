@@ -1,19 +1,5 @@
 ---
 layout: default
 ---
-<p class="meta">{{ page.date | date_to_string }}</p>
-
-<div class="post">
-    {{ content }}
-</div>
-    <i class="fa fa-folder-open-o"></i> Categories
-<ul class="fa-ul">
-    {% for category in page.categories %}
-    <li>
-        <i class="fa fa-folder-o"></i>
-        <a href="/categories.html#{{ category }}-ref">
-            {{ category }}
-        </a>
-    </li>
-    {% endfor %}
-</ul>
+{% include JB/setup %}
+{% include themes/twitter/post.html %}
