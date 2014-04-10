@@ -1,6 +1,10 @@
 # This is the default format. 
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title 
+exclude:     [nbproject]
+
+permalink: /:year/:month/:day/:title 
+
+markdown: redcarpet
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 pygments: true
@@ -10,12 +14,16 @@ pygments: true
 #
 title : Jekyll Bootstrap
 tagline: Site Tagline
+
 author :
-  name : Name Lastname
-  email : blah@email.test
-  github : username
-  twitter : username
-  feedburner : feedname
+  name : Andrey Marushkevych
+  email : marushkevych@gmail.com
+  github : marushkevych
+  twitter : marushkevych
+  linkedin : andrey-marushkevych/7/100/960
+  google_plus : AndreyMarushkevych
+  stack_exchange: 454839
+  
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt 
