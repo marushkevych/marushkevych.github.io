@@ -13,7 +13,7 @@ Here is how to enable this with `grunt connect`:
 
 #### Install `connect-modrewrite` with
 
-```
+```js
 npm install connect-modrewrite --save-dev
 ```
 

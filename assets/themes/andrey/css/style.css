@@ -256,6 +256,10 @@ h2 {
     margin-top: 8px;
 } 
 
+ul.posts h2 {
+    padding-top: 30px;
+}
+
 h3 {
     color: #d5000d;
     font-size: 18px;
@@ -343,9 +347,9 @@ footer a:hover {
 * html .clearfix {height: 1%;}
 .clearfix {display: block;}
 
-.posts {
+/*.posts {
     margin-bottom: 2em;
-}
+}*/
 
 .posts li {
     list-style-type: none;
@@ -406,7 +410,7 @@ footer a:hover {
     
     html, body, div, span, applet, object, iframe,
     h4, h5, h6, p, blockquote, pre,
-    a, abbr, acronym, address, big, cite, code,
+    abbr, acronym, address, big, cite,
     del, dfn, em, img, ins, kbd, q, s, samp,
     small, strike, strong, sub, sup, tt, var,
     b, u, i, center,
@@ -414,10 +418,10 @@ footer a:hover {
     fieldset, form, label, legend,
     table, caption, tbody, tfoot, thead, tr, th, td,
     article, aside, canvas, details, embed, 
-    figure, figcaption, footer, header, hgroup, 
+    figure, figcaption, header, hgroup, 
     menu, nav, output, ruby, section, summary,
-    time, mark, audio, video {
-        font-size: 40px;
+    time, mark, audio, video, .navbar {
+        font-size: 30px;
         /*font-size: 1em;*/
     }
     
