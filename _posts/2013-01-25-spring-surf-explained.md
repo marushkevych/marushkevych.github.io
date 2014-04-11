@@ -105,8 +105,8 @@ Web-script artifacts should follow this naming convention:
 
 ## Templates
 
-In Spring-Surf we use Template to define common structure of pages. At minimum, template needs*description 
-xml *and *free-marker ftl file*. Optionally, templates can have *controller script* if template has some logic to execute.
+In Spring-Surf we use Template to define common structure of pages. At minimum, template needs **description xml** 
+and **free-marker ftl file**. Optionally, templates can have **controller script** if template has some logic to execute.
 
 A site can have one or many templates. A template would define common HTML for all the pages using this template. 
 For example, we could have one template for Logged-out state of the application, and one template for Logged-in state, with the user account Menu:
