@@ -355,7 +355,7 @@ footer a:hover {
 }*/
 
 .posts li {
-    list-style-type: none;
+    /* list-style-type: none; */
     line-height: 1.75em;
 }
 
