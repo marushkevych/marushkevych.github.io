@@ -147,7 +147,9 @@ For example, we could have one template for Logged-out state of the application,
 The `@region` tags above are the way templates specify which component to use to render particular "Region" of the page. 
 The `id` and `scope` are used to locate particular component.
 
-For example `<@region id="Content" scope="page"/>` means we want to use "Content" component, declared with "page" scope.
+For example
+`<@region id="Content" scope="page"/>`
+means we want to use "Content" component, declared with "page" scope.
 
 Lets talk about components...
 
