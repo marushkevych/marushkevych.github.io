@@ -124,7 +124,7 @@ Template specifies page's HTML that can include components (Web-Scripts) to rend
     state, with the user account Menu:</p>
 
 
-![Logged out template](/assets/images/mockup_Logged out template.png)
+<img class="confluence-embedded-image" src="/assets/images/mockup_Logged out template.png">
 
 
 <table class="wysiwyg-macro" data-macro-name="code" data-macro-parameters="language=html/xml|title=Logged out template ftl" style="background-image: url(/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGU6dGl0bGU9TG9nZ2VkIG91dCB0ZW1wbGF0ZSBmdGx8bGFuZ3VhZ2U9aHRtbC94bWx9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
