@@ -96,35 +96,41 @@ Errors are handled by function passed as second argument to `then()` method:
 ```js
 // Controller
 module.controller("programCtrl", function($scope, programService){
-    $scope.programs = programService.getPrograms().then(null, function(errorMessage){
-        // called when service handler returns rejected value
-        $scope.error = errorMessage; // simply display error message, that we expect from service
-    };
+    $scope.programs = programService.getPrograms().then(
+        null, 
+        function(errorMessage){
+            // called when service handler returns rejected value
+            // simply display error message, that we expect from service
+            $scope.error = errorMessage;
+        }
+    );
 });
  
 // Service
 module.factory('programService', function($http, $q){
     return {
         getPrograms: function(){
-            return $http.get("api/programs").then(function(response){
-                // called when $http.get() successfully receives response
-                return response.data;
-            },
-            function(response){
-                // called when $http.get() failes
-                var errorMessage = "";
-                switch(response.status){
-                    case 404:
-                        errorMessage = "Not found";
-                        break;
-                    case 500:
-                        errorMessage = "Fatal error";
-                        break;
-                    default:
-                        errorMessage = "An error has occurred";
+            return $http.get("api/programs").then(
+                function(response){
+                    // called when $http.get() successfully receives response
+                    return response.data;
+                },
+                function(response){
+                    // called when $http.get() failes
+                    var errorMessage = "";
+                    switch(response.status){
+                        case 404:
+                            errorMessage = "Not found";
+                            break;
+                        case 500:
+                            errorMessage = "Fatal error";
+                            break;
+                        default:
+                            errorMessage = "An error has occurred";
+                    }
+                    return $q.reject(errorMessage);
                 }
-                return $q.reject(errorMessage);
-            });
+            );
         }
     };
 });
