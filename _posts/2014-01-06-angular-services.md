@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Testing Angularjs Services
+title:  Angularjs Services
 tagline: encapsulating interactions with back-end and error handling
 date:   2014-01-06 10:00:00
 categories: angularjs
