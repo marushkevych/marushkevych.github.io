@@ -240,7 +240,7 @@ Here we define "logged-in-template", with template specific component - "Menu"
 
 Global components are defined in their own xml file, in `surf/site/components` directory (should be included in web-application classpath).
 
-Here we declare global "footer" component (see <guid>), that binds "/footer" web-script (see <url>) to "footer" id (see <region-id>)
+Here we declare global "footer" component (see `<guid>`), that binds "/footer" web-script (see `<url>`) to "footer" id (see `<region-id>`)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
