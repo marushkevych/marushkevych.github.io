@@ -35,7 +35,7 @@ Here is the simple example of typical Service and Controller:
 module.controller("programCtrl", function($scope, programService){
     $scope.programs = programService.getPrograms();
 });
- 
+
 // Service
 module.factory('programService', function($http){
     return {
@@ -73,7 +73,7 @@ In the controller we can use `then()` method again to further transform respon
 module.controller("programCtrl", function($scope, programService){
     $scope.programs = programService.getPrograms().then(applySomePresentationLogicToData);
 });
- 
+
 // called when service's success handler returns
 function applySomePresentationLogicToData(data){
     // do something to data
@@ -96,7 +96,7 @@ Here we will perform error handling in both service and controller. Service will
 Errors are handled by function passed as second argument to `then()` method:
 
 ```js
- // Controller
+// Controller
 module.controller("programCtrl", function($scope, programService){
     $scope.programs = programService.getPrograms().then(null, function(errorMessage){
         // called when service handler returns rejected value
