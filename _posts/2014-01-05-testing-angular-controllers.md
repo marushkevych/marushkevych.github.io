@@ -23,7 +23,7 @@ In order to test a Controller, `$scope` object should be created within unit tes
    ```js
    var scope, controller;
 
-   beforeEach(inject(function($rootScope, $controller, $location) {
+   beforeEach(inject(function($rootScope, $controller) {
       scope = $rootScope.$new();
       controller = $controller;
    }));
@@ -43,7 +43,7 @@ describe("MyController", function(){
 
     var scope, controller;
 
-    beforeEach(inject(function($rootScope, $controller, $location) {
+    beforeEach(inject(function($rootScope, $controller) {
         scope = $rootScope.$new();
         controller = $controller;
     }));
