@@ -151,42 +151,50 @@ For example `<@region id="Content" scope="page"/>` means we want to use "Conte
 
 Lets talk about components...
 
-h2. Components
+## Components
 
 Component is basically a web-script bound to an *ID* and *Scope*.
 
-In order to use web-script, first it should be declared as component. Below we declare component by binding `/contactus` web-script to `Content` component id.
+In order to use web-script, first it should be declared as component. Below we declare component by binding `/contactus` 
+web-script to `Content` component id.
 
-{code:language=html/xml|title=Component declaration}
+```xml
 <components>      
     <component>
         <region-id>Content</region-id>            
         <url>/contactus</url>
     </component>
 </components>
-            
-{code}
+```
 
-{note}
-<region-id> is very confusing name. This is really a component-id.{note}
+__Note:__
+> <region-id> is very confusing name. This is really a component-id.
 
-h3. Component scope
+### Component scope
 
 Component scope is implicit and derived from the location of the component declaration.
 
 Components can be declared with three scopes:
 
-* *page* - means that component is page specific (declared in current page)
-* *template* - means that component is template specific (declared in current template)
-* *global* - global component are declared separately on file system and always available.
-"*Page*" scope allows Templates (which are generic) to render page-specific content. "Logged in template", for example, can be used by many pages. `<@region id="Content" scope="page"/>`means that in order to render page-specific content, all pages should declare component "Content". If component "Content" is declared in Template (i.e. with "template" scope), it will be ignored."*Template*" scope is used to limit component only to current template. Other templates can not use Component declared in this Template."*Global*" scope makes Component available globally to all templates
-h3. Page component
+* **page** - means that component is page specific (declared in current page)
+* **template** - means that component is template specific (declared in current template)
+* **global** - global component are declared separately on file system and always available.
+
+"**Page**" scope allows Templates (which are generic) to render page-specific content. 
+"Logged in template", for example, can be used by many pages. 
+`<@region id="Content" scope="page"/>` means that in order to render page-specific content, 
+all pages should declare component "Content". 
+If component "Content" is declared in Template (i.e. with "template" scope), it will be ignored.
+"**Template**" scope is used to limit component only to current template. Other templates can not use Component declared in this Template.
+"**Global**" scope makes Component available globally to all templates
+
+### Page component
 
 Page decalration consist of only one artifact - page description xml
 
 Here is the example of page description xml:
 
-{code:language=html/xml|title=Page description xml}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <page> 
     <id>contactus</id>
@@ -200,20 +208,19 @@ Here is the example of page description xml:
         </component>
     </components>
 </page>
-            
-{code}
+```
 
 Page definition specifies:
 
-* *id* - to be used by Spring framework to render this particular page.
-* *template-instance* - template to use to render this page
-* *components* - page specific components (components with page scope)
+* **id** - to be used by Spring framework to render this particular page.
+* **template-instance** - template to use to render this page
+* **components** - page specific components (components with page scope)
 
-h3. Template component
+### Template component
 
 Here we define "logged-in-template", with template specific component - "Menu"
 
-{code:language=html/xml|title=Template description xml}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <template-instance>
     <title>logged-in-template</title>  
@@ -226,18 +233,16 @@ Here we define "logged-in-template", with template specific component - "Menu"
         </component>    
     </components>   
 </template-instance>
-            
-{code}
+```
 
 
-
-h3. Global component
+### Global component
 
 Global components are defined in their own xml file, in `surf/site/components` directory (should be included in web-application classpath).
 
 Here we declare global "footer" component (see <guid>), that binds "/footer" web-script (see <url>) to "footer" id (see <region-id>)
 
-{code:language=html/xml|title=surf/site/components/global.footer.xml}
+```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <component> 
   <guid>global.footer</guid>  
@@ -251,5 +256,5 @@ Here we declare global "footer" component (see <guid>), that binds "/footer" web
   <region-id>footer</region-id>  
   <properties/>
 </component>
-            
-{code}
+```
+
