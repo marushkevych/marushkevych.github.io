@@ -10,7 +10,7 @@ excerpt: Angular controllers are functions that are called when corresponding vi
 
 Angular controllers are functions that are called when corresponding view is loaded. Controllers initialize $scope that is passed to them as an argument.
 
-In order to test a Controller, `$scope` object should be created within unit test. A special `$controller` service is then used to call Controllers function.
+In order to test a Controller, `$scope` object should be created within unit test. A special `$controller` service is then used to call Controller function.
 
 1. Load module with the controller
 
