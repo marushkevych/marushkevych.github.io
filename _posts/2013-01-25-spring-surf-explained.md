@@ -7,7 +7,7 @@ categories: spring-surf
 excerpt: Spring Surf is a "View Composition framework" that can be used as a View in Spring MVC
 ---
 
- ![Logged out template](assets/images/mockup_Logged out template.png)
+ ![Logged out template](/assets/images/mockup_Logged out template.png)
 
 <h1>Overview</h1>
 <p>Spring Surf is a &quot;View Composition framework&quot; that can be used as a View in Spring MVC.</p>
