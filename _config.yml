@@ -14,6 +14,8 @@ pygments: true
 title : Notes To Self
 tagline: on software development and tech stuff...
 
+description: A personal site and blog of Andrey Marushkevych. Notes on sofware development and technology, java, javascript, nodejs, angularjs.
+
 author :
   name : Andrey Marushkevych
   email : marushkevych@gmail.com
