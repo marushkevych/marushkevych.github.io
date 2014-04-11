@@ -15,7 +15,7 @@ In order to test a Controller, `$scope` object should be created within unit tes
 1. Load module with the controller
 
    ```js
-   beforeEach(angular.mock.module('MyController'))
+   beforeEach(angular.mock.module('MyControllerModule'))
    ```
 
 2. Inject $rootScope to create $scope, and inject $controller
@@ -39,7 +39,7 @@ Here is complete example:
 
 ```js
 describe("MyController", function(){
-    beforeEach(angular.mock.module('MyController'));
+    beforeEach(angular.mock.module('MyControllerModule'));
 
     var scope, controller;
 
