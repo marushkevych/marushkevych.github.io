@@ -7,7 +7,7 @@ categories: angularjs
 
 When angular application is running in html5 mode (`$locationProvider.html5Mode(true);`)
 navigating directly to any page other that index.html (or using browser refresh button) will not work.
-Server needs to handle such request and serve index.html.
+Server needs to handle such request and serve index.html.<!--more-->
 
 Here is how to enable this with `grunt connect`:
 
