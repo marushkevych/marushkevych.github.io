@@ -4,9 +4,9 @@ title: Blog Posts
 ---
 
 <div id="home">
-    <ul class="posts">
+    <div class="posts">
         {% for post in site.posts %}
-        <li> 
+        <div> 
             <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
             <span>{{ post.date | date_to_string }}</span>
             &nbsp; &nbsp; &nbsp;
@@ -23,7 +23,7 @@ title: Blog Posts
                 {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
                 <a href="{{ post.url }}">more...</a>
             </p>
-        </li>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 </div>
