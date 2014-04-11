@@ -44,21 +44,21 @@ integrates nicely with Spring MVC. Here we will try to explain how it works.
 
 These are tree main types of artifacts, needed to create views:
 
-* *Pages*
+__Pages__
   * defined in `WEB-INF/pages`
   * consists of:
-    * *description .xml* - specifies Page Id, Template to use and declares page specific Components
+    * __description .xml__ - specifies Page Id, Template to use and declares page specific Components
 
 
-* *Templates*
+__Templates__
   * defined in `WEB-INF/templates`
   * consists of:
-    * *description .xml* - specifies Template Id and declares template specific Components
-    * *free-marker .ftl* - specifies HTML structure of the page and uses Components to render regions of HTML
-    * *controller .js* (optional)
+    * __description .xml__ - specifies Template Id and declares template specific Components
+    * __free-marker .ftl__ - specifies HTML structure of the page and uses Components to render regions of HTML
+    * __controller .js__ (optional)
 
 
-* *Web-Scripts*
+__Web-Scripts__
   * defined in `WEB-INF/webscripts`
   * consists of:
     * *description .xml* - specifies webscript URL - (used in component declarations)
