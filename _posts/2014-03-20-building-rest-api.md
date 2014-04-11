@@ -4,7 +4,7 @@ title:  Building REST Api
 date:   2014-03-20 12:00:00
 categories: REST
 ---
-Some useful links and notes on REST, security and cross-domain.<!--more-->
+Some useful links and notes on REST, security and cross-domain.
 
 
 - [Creating a REST API using Node.js, Express, and MongoDB](http://coenraets.org/blog/2012/10/creating-a-rest-api-using-node-js-express-and-mongodb/)

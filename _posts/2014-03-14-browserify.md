@@ -6,7 +6,7 @@ categories: angularjs
 ---
 
 Last few days I was trying to come up with easiest way to manage packages and dependencies in AngularJS projects. 
-I discovered [Browserify](http://browserify.org) and its awesome cause it allows you to use `npm` and node style 'require' in your code.<!--more-->
+I discovered [Browserify](http://browserify.org) and its awesome cause it allows you to use `npm` and node style 'require' in your code.
 
 Here is what I'm going to try:
 
