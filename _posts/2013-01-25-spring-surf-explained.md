@@ -64,9 +64,9 @@ __Web-Scripts__
 
 * defined in `WEB-INF/webscripts`
 * consists of:
-  * *description .xml* - specifies webscript URL - (used in component declarations)
-  * *free-marker .ftl* - html template
-  * *controller .js* (optional)
+  * **description .xml** - specifies webscript URL - (used in component declarations)
+  * **free-marker .ftl** - html template
+  * **controller .js** (optional)
 
 #### Web-Scripts
 
