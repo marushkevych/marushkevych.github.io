@@ -45,12 +45,14 @@ integrates nicely with Spring MVC. Here we will try to explain how it works.
 These are tree main types of artifacts, needed to create views:
 
 __Pages__
+
 * defined in `WEB-INF/pages`
 * consists of:
   * __description .xml__ - specifies Page Id, Template to use and declares page specific Components
 
 
 __Templates__
+
 * defined in `WEB-INF/templates`
 * consists of:
   * __description .xml__ - specifies Template Id and declares template specific Components
@@ -59,6 +61,7 @@ __Templates__
 
 
 __Web-Scripts__
+
 * defined in `WEB-INF/webscripts`
 * consists of:
   * *description .xml* - specifies webscript URL - (used in component declarations)
