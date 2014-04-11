@@ -8,11 +8,12 @@ excerpt: Spring Surf is a "View Composition framework" that can be used as a Vie
 ---
 
 
-h1. Overview
+# Overview
 
 Spring Surf is a "View Composition framework" that can be used as a View in Spring MVC.
 
-In Spring Surf each page is assembled with reusable template and multiple reusable components, called Web-Scripts. Template specifies page's HTML that can include components (Web-Scripts) to render parts of the page.
+In Spring Surf each page is assembled with reusable template and multiple reusable components, called Web-Scripts. 
+Template specifies page's HTML that can include components (Web-Scripts) to render parts of the page.
 
 Web-Script is represented by three files:
 
@@ -20,11 +21,14 @@ Web-Script is represented by three files:
 * free-marker template
 * controller script (JavaScript or java)
 
-Alfresco calls Web-Script "mini MVC" where free-marker templates are View, controller script is controller, and Model is the context accessible from controller and free-marker template.
+Alfresco calls Web-Script "mini MVC" where free-marker templates are View, controller script is controller, 
+and Model is the context accessible from controller and free-marker template.
 
-h1. Spring Surf is not MVC framework
+# Spring Surf is not MVC framework
 
-Alfresco Quick Start is trying to position Spring Surf as MVC framework on itself, but its a far stretch cause when Spring Surf page is being rendered the View is already being written to response, so its*too late* to make any "Control" decisions like rendering another view or showing Error page or forwarding to another Page.
+Alfresco Quick Start is trying to position Spring Surf as MVC framework on itself, 
+but its a far stretch cause when Spring Surf page is being rendered the View is already being written to response, 
+so its *too late* to make any "Control" decisions like rendering another view or showing Error page or forwarding to another Page.
 
 Here are the reasons one should not use Spring Surf as MVC framework on itself:
 
@@ -33,63 +37,80 @@ Here are the reasons one should not use Spring Surf as MVC framework on itself:
 * Inability to reuse controllers across multiple views (this actually relates to bullet one)
 * Inability to apply security rules to multiple pages
 
-h1. Spring Surf is a "View Composition framework"
+# Spring Surf is a "View Composition framework"
 
-While Spring Surf is not an MVC framework, it is very sophisticated and powerful "View Composition framework" that integrates nicely with Spring MVC. Here we will try to explain how it works.
+While Spring Surf is not an MVC framework, it is very sophisticated and powerful "View Composition framework" that 
+integrates nicely with Spring MVC. Here we will try to explain how it works.
 
 These are tree main types of artifacts, needed to create views:
 
 * *Pages*
-** defined in {{WEB-INF/pages}}
-** consists of:
-*** *description .xml* - specifies Page Id, Template to use and declares page specific Components\\
-\\
+  * defined in `WEB-INF/pages`
+  * consists of:
+    * *description .xml* - specifies Page Id, Template to use and declares page specific Components
+
 
 * *Templates*
-** defined in {{WEB-INF/templates}}
-** consists of:
-*** *description .xml* - specifies Template Id and declares template specific Components
-*** *free-marker .ftl* - specifies HTML structure of the page and uses Components to render regions of HTML
-*** *controller .js* (optional)\\
-\\
+  * defined in `WEB-INF/templates`
+  * consists of:
+    * *description .xml* - specifies Template Id and declares template specific Components
+    * *free-marker .ftl* - specifies HTML structure of the page and uses Components to render regions of HTML
+    * *controller .js* (optional)
+
 
 * *Web-Scripts*
-** defined in {{WEB-INF/webscripts}}
-** consists of:
-*** *description .xml* - specifies webscript URL - (used in component declarations)
-*** *free-marker .ftl* - html template
-*** *controller .js* (optional)
+  * defined in `WEB-INF/webscripts`
+  * consists of:
+    * *description .xml* - specifies webscript URL - (used in component declarations)
+    * *free-marker .ftl* - html template
+    * *controller .js* (optional)
 
-h2. Web-Scripts
+## Web-Scripts
 
-Web-scripts are used to render snippets of html that can be reused across pages. Web-scripts implement presentation logic in JavaScript controller, which computes values and puts them in model (similar to controller in Spring MVC). That model is available in free-marker template.
+Web-scripts are used to render snippets of html that can be reused across pages. 
+Web-scripts implement presentation logic in JavaScript controller, which computes 
+values and puts them in model (similar to controller in Spring MVC). 
+That model is available in free-marker template.
 
-Web-scripts are used by Templates (see below). In order to use Web-script, it should be declared as component. The Template then specifies which region of html will be rendered by which component.
+Web-scripts are used by Templates (see below). In order to use Web-script, it should be declared as component. 
+The Template then specifies which region of html will be rendered by which component.
 
 In typical dynamic web-application most of the content is generated by web-scripts:
 
 * dynamic content
 * reusable static html
 * content from alfresco repo
-h3. Naming Web-Script artifacts:
+
+### Naming Web-Script artifacts:
 
 Web-script artifacts should follow this naming convention:
 
 * For GET requests:
-** *name.get.desc.xml* - descriptor
-** *name.get.html.ftl* - template
-** *name.get.js* - js controller
+  * *name.get.desc.xml* - descriptor
+  * *name.get.html.ftl* - template
+  * *name.get.js* - js controller
 * For POST requests:
-** *name.post.desc.xml* - descriptor
-** *name.post.html.ftl* - template
-** *name.post.js* - js controller*Note:* > If POST web-script is not provided, the GET web-script will be used by default. > This is very useful for rendering HTML forms. We only need to provide GET web-script for "getting" > the form and for displaying form with error when POST has failed.
-h2. Templates
+  * *name.post.desc.xml* - descriptor
+  * *name.post.html.ftl* - template
+  * *name.post.js* - js controller
 
-In Spring-Surf we use Template to define common structure of pages. At minimum, template needs*description xml *and *free-marker ftl file*. Optionally, templates can have *controller script* if template has some logic to execute.
 
-A site can have one or many templates. A template would define common HTML for all the pages using this template. For example, we could have one template for Logged-out state of the application, and one template for Logged-in state, with the user account Menu:
-!!{color:#6D6D6D}{color}
-{code:language=html/xml|title=Logged out template ftl}
+*Note:* 
+> If POST web-script is not provided, the GET web-script will be used by default. 
+> This is very useful for rendering HTML forms. We only need to provide GET web-script for "getting" 
+> the form and for displaying form with error when POST has failed.
+
+## Templates
+
+In Spring-Surf we use Template to define common structure of pages. At minimum, template needs*description 
+xml *and *free-marker ftl file*. Optionally, templates can have *controller script* if template has some logic to execute.
+
+A site can have one or many templates. A template would define common HTML for all the pages using this template. 
+For example, we could have one template for Logged-out state of the application, and one template for Logged-in state, with the user account Menu:
+
+![Logged out template](/assets/images/mockup_Logged out template.png)
+
+```html
 <html>
     <body>
         <@region id="Header" scope="global"/>
@@ -99,14 +120,12 @@ A site can have one or many templates. A template would define common HTML for a
         <@region id="Footer" scope="global"/> 
     </body>
 </html>
-            
-{code}
+```
 
 
+![Logged in template](/assets/images/mockup_Logged in template.png)
 
-!mockup_Logged in template.png!
-
-{code:language=html/xml|title=Logged in template ftl}
+```html
 <html>
     <body>
         <@region id="Header" scope="global"/>
@@ -119,14 +138,13 @@ A site can have one or many templates. A template would define common HTML for a
         <@region id="Footer" scope="global"/> 
     </body>
 </html>
-            
-{code}
+```
 
 
+The `@region` tags above are the way templates specify which component to use to render particular "Region" of the page. 
+The `id` and `scope` are used to locate particular component.
 
-The {{@region}} tags above are the way templates specify which component to use to render particular "Region" of the page. The {{id}} and {{scope}} are used to locate particular component.
-
-For example {{<@region id="Content" scope="page"/>}} means we want to use "Content" component, declared with "page" scope.
+For example `<@region id="Content" scope="page"/>` means we want to use "Content" component, declared with "page" scope.
 
 Lets talk about components...
 
@@ -134,7 +152,7 @@ h2. Components
 
 Component is basically a web-script bound to an *ID* and *Scope*.
 
-In order to use web-script, first it should be declared as component. Below we declare component by binding {{/contactus}} web-script to {{Content}} component id.
+In order to use web-script, first it should be declared as component. Below we declare component by binding `/contactus` web-script to `Content` component id.
 
 {code:language=html/xml|title=Component declaration}
 <components>      
@@ -158,7 +176,7 @@ Components can be declared with three scopes:
 * *page* - means that component is page specific (declared in current page)
 * *template* - means that component is template specific (declared in current template)
 * *global* - global component are declared separately on file system and always available.
-"*Page*" scope allows Templates (which are generic) to render page-specific content. "Logged in template", for example, can be used by many pages. {{<@region id="Content" scope="page"/>}}means that in order to render page-specific content, all pages should declare component "Content". If component "Content" is declared in Template (i.e. with "template" scope), it will be ignored."*Template*" scope is used to limit component only to current template. Other templates can not use Component declared in this Template."*Global*" scope makes Component available globally to all templates
+"*Page*" scope allows Templates (which are generic) to render page-specific content. "Logged in template", for example, can be used by many pages. `<@region id="Content" scope="page"/>`means that in order to render page-specific content, all pages should declare component "Content". If component "Content" is declared in Template (i.e. with "template" scope), it will be ignored."*Template*" scope is used to limit component only to current template. Other templates can not use Component declared in this Template."*Global*" scope makes Component available globally to all templates
 h3. Page component
 
 Page decalration consist of only one artifact - page description xml
@@ -212,7 +230,7 @@ Here we define "logged-in-template", with template specific component - "Menu"
 
 h3. Global component
 
-Global components are defined in their own xml file, in {{surf/site/components}} directory (should be included in web-application classpath).
+Global components are defined in their own xml file, in `surf/site/components` directory (should be included in web-application classpath).
 
 Here we declare global "footer" component (see <guid>), that binds "/footer" web-script (see <url>) to "footer" id (see <region-id>)
 
