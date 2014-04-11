@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  Angularjs Services
-tagline: encapsulating interactions with back-end and error handling
+title:  Angularjs Promises
+tagline: Using Angular "Promises" to transform response data through the layers of application
 date:   2014-01-06 10:00:00
 categories: angularjs
-excerpt: Encapsulating interactions with back-end and error handling
+excerpt: Using Angular "Promises" to transform response data through the layers of application
 ---
 
 Any interaction with back-end (rest API) should be encapsulated in Angular services. This way back-end interaction can be reused across multiple controllers. 
