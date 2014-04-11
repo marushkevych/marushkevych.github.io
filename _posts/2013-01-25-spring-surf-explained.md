@@ -168,7 +168,7 @@ web-script to `Content` component id.
 ```
 
 __Note:__
-> <region-id> is very confusing name. This is really a component-id.
+> `<region-id>` is very confusing name. This is really a component-id.
 
 ### Component scope
 
