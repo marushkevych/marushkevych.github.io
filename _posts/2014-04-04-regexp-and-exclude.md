@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  Regular Expressions with exclusions and "and" conditions
+tagline: or how to configure connect-modrewrite
 date:   2014-04-04 10:00:00
 categories: angularjs javascript regexp
 ---
