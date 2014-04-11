@@ -7,6 +7,8 @@ categories: spring-surf
 excerpt: Spring Surf is a "View Composition framework" that can be used as a View in Spring MVC
 ---
 
+ ![Logged out template](assets/images/mockup_Logged out template.png)
+
 <h1>Overview</h1>
 <p>Spring Surf is a &quot;View Composition framework&quot; that can be used as a View in Spring MVC.</p>
 <p>In Spring Surf each page is assembled with reusable template and multiple reusable components, called Web-Scripts. 
@@ -122,7 +124,7 @@ Template specifies page's HTML that can include components (Web-Scripts) to rend
     For example, we could have one template for Logged-out state of the application, and one template for Logged-in 
     state, with the user account Menu:</p>
 <p>
-    ![Logged out template](/assets/images/mockup_Logged out template.png)
+    ![Logged out template](assets/images/mockup_Logged out template.png)
 </p>
 <table class="wysiwyg-macro" data-macro-name="code" data-macro-parameters="language=html/xml|title=Logged out template ftl" style="background-image: url(/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGU6dGl0bGU9TG9nZ2VkIG91dCB0ZW1wbGF0ZSBmdGx8bGFuZ3VhZ2U9aHRtbC94bWx9&amp;locale=en_GB&amp;version=2); background-repeat: no-repeat;" data-macro-body-type="PLAIN_TEXT">
     <tr><td class="wysiwyg-macro-body">
