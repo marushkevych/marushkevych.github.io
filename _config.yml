@@ -11,7 +11,7 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : notes to self
+title : Notes To Self
 tagline: on software development and tech stuff...
 
 author :
