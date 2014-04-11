@@ -6,7 +6,6 @@ date:   2014-01-06 10:00:00
 categories: angularjs
 excerpt: Encapsulating interactions with back-end and error handling
 ---
- 
 
 Any interaction with back-end (rest API) should be encapsulated in Angular services. This way back-end interaction can be reused across multiple controllers. 
 This will also allow encapsulation of advanced data handling like caching (angular services are singletons, so we can store data to improve performance).
@@ -16,7 +15,7 @@ This will also allow encapsulation of advanced data handling like caching (angul
 Note
 > Understanding of "Promises" is required. See [http://code.angularjs.org/1.0.8/docs/api/ng.$q](http://code.angularjs.org/1.0.8/docs/api/ng.$q)
 > Here is great explanation of 'Promise.then()' method: [https://github.com/kriskowal/q](https://github.com/kriskowal/q)
- 
+
 
 Angular's "Promise" API allows us to transform response data through the layers of application.
 
@@ -64,7 +63,6 @@ getPrograms: function(){
     return chainedPromise;
 }
 ```
- 
 
 In the controller we can use `then()` method again to further transform response or to handle errors. This is called Chaining Promises.
 
@@ -136,7 +134,6 @@ In this example we didn't need to manipulate success result in controller, so we
 
 Note, that we use `$q.reject()` so that promise returned to controller fails too (gets resolved with error handler). Think of it as `throw` keyword in java. 
 The error handler passed to `then()` is a try-catch block where we can do some error handling and "re-throw" same or new error (using `$q.reject()`)
- 
 
 ## Response interceptor 
 
