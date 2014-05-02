@@ -26,7 +26,7 @@ Here is jasmine unit test, that mocks ```MyService```.
 If we omit ```scope.$digest()``` call, the test fails. 
 
 ```js
-describe("Test controller with mocked service", function(){
+describe("MyController", function(){
     var rootScope, scope, controller, serviceMock;
   
     beforeEach(angular.mock.module('MyControllerModule'))
@@ -46,7 +46,7 @@ describe("Test controller with mocked service", function(){
         }
     }));  
   
-    it('should call service and set result in the scope', function(){
+    it('should call MyService and set result in the scope', function(){
         controller("MyController", {$scope: scope, MyService: serviceMock});
         //causes promises to check to see if they are fulfilled
         scope.$digest();
