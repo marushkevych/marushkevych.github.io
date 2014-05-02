@@ -21,7 +21,7 @@ function MyController($scope, MyService){
 }
 ```
 
-Here is jasmine unit test, that mocks ```MyService```
+Here is jasmine unit test, that mocks ```MyService```.
 If we omit ```scope.$digest()``` call, the test fails. 
 
 ```js
