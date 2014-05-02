@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  Mocking Angularjs promises in unit tests 
-tagline: or how to configure connect-modrewrite
+title:  Mocking Angularjs promises when testing controllers. 
+tagline:  
 date:   2014-05-02 10:00:00
 categories: angularjs
 ---
