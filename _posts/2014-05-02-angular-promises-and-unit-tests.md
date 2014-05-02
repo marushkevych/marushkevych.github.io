@@ -7,7 +7,7 @@ categories: angularjs
 ---
 
 Its easy to mock a service method that returns Promise. 
-Whats not easy is to remember to call ```scope.$digest();``` in order to cause promises to check if they are fulfilled:
+Whats not easy is to remember to call ```scope.$digest()``` in order to cause promises to check if they are fulfilled:
 
 Lets say we want to test following controller:
 
@@ -20,6 +20,9 @@ function MyController($scope, MyService){
     });
 }
 ```
+
+Here is jasmine unit test, that mocks ```MyService```
+If we omit ```scope.$digest()``` call, the test fails. 
 
 ```js
 describe("Test controller with mocked service", function(){
@@ -44,6 +47,7 @@ describe("Test controller with mocked service", function(){
   
     it('should call service and set result in the scope', function(){
         controller("MyController", {$scope: scope, MyService: serviceMock});
+        //causes promises to check to see if they are fulfilled
         scope.$digest();
         expect(scope.result).toBe('foo')
     });
