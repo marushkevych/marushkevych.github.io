@@ -14,6 +14,7 @@ Lets say we want to test following controller:
 ```js
 var module = angular.module('MyControllerModule', []);
 module.controller("MyController", MyController);
+
 function MyController($scope, MyService){
     MyService.getFoo().then(function(result){
         $scope.result = result;
