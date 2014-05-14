@@ -14,7 +14,7 @@ So, in a nutshell:
 
 - `@` binds a local scope property to the value of DOM attribute. The result is always a string since DOM attributes are strings. As the value of DOM attribute changes so will local scope property.
 - `=` bi-directionally binds an object
-- `&` provides a way to execute an expression in the context of parent scope. It wraps a function around the expression. If expression is a function call like `increment(amount)`, we can pass arguments to the function via named parameters hash: `{amount: 22}`
+- `&` provides a way to execute an expression in the context of parent scope. It wraps a function around the expression. If expression is a function call like `increment(amount)`, we can pass arguments to the function via named parameters hash: `{amount: 22}`. Here is an example:
 
     ```js
     // button directive
