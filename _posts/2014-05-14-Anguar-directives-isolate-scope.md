@@ -38,7 +38,7 @@ So, in a nutshell:
     // controller
     function controller($scope){
       $scope.increment = function(amount){
-        // this is called with 22 when buttom is clicked
+        // this is called with 22 when button is clicked
       };
     }
     ```
