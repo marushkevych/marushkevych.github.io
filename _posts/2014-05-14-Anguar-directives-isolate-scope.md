@@ -25,7 +25,7 @@ So, in a nutshell:
         scope: {
           action: '&'
         },
-        template: '<button ng-click="action({amount: 22})"> Perform action </button>'
+        template: '<button ng-click="action({amount: 22})"> Add 22 </button>'
       };
     }
     ```
