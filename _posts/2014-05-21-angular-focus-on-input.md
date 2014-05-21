@@ -25,6 +25,49 @@ And use it like this:
 <input type="text" name="address" focus>
 ```
 
-The example above will focus on load. But what if you need to focus on condition, say when the form becoms visible?
-We can add a boolean `@` attribute to our directive to comminucate when to focus. But there is a little catch: we need to use `timeout()` to call `focus()`.
+The example above will focus on load. But what if you need to focus on condition, say when the form becomes visible?
+We can add a boolean `@` attribute to our directive to communicate when to focus. But there is a little catch: we need to wrap `focus()` with `timeout()` in order to let browser to handle the event that triggered our directive:
 
+```js
+focus.inject=["$timeout"];
+function focus($timeout) {
+  return {
+    scope: {
+      focus: '@'
+    },
+    link: function(scope, element) {
+      function doFocus() {
+        $timeout(function() {
+          element[0].focus();
+        });
+      }
+      
+      if (scope.focus != null)
+      {
+        // focus unless attribute evaluates to 'false'
+        if (scope.focus !== 'false') {
+          doFocus();
+        }
+
+        // focus if attribute value changes to 'true'
+        scope.$watch('focus', function(value) {
+          if (value === 'true') {
+            doFocus();
+          }
+        });
+      }
+      else {
+        // if attribute value is not provided - always focus
+        doFocus();
+      }
+
+    }
+  };
+}
+```
+
+And use it like this:
+
+```html
+<input type="text" name="address" focus="{{memberProfile.showProfileAddressForm}}">
+```
