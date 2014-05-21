@@ -26,7 +26,7 @@ And use it like this:
 ```
 
 The example above will focus on load. But what if you need to focus on condition, say when the form becomes visible?
-We can add a boolean `@` [isolate scope property](/2014/05/14/Anguar-directives-isolate-scope) to our directive to communicate when to focus. But there is a little catch: we need to wrap `focus()` with `timeout()` in order to let browser handle the event that triggered our directive:
+We can add a boolean `@` [isolate scope property](/2014/05/14/Anguar-directives-isolate-scope) to our directive to communicate when to focus. But there is a little catch: we need to wrap `focus()` with `timeout()` in order to let browser handle the event that was supposed to trigger the focus:
 
 ```js
 focus.inject=["$timeout"];
