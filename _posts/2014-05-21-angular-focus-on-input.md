@@ -69,5 +69,6 @@ function focus($timeout) {
 And use it like this:
 
 ```html
-<input type="text" name="address" focus="{{memberProfile.showProfileAddressForm}}">
+<input type="text" name="address" focus="{{ '{{memberProfile.showProfileAddressForm' }} }}">
 ```
+{{ "{% highlight ruby " }}%}
