@@ -10,7 +10,7 @@ Scala is one of those languages (for me at least) that need constant use in orde
 I completed "Functional programming in Scala" course more then year ago, doing pretty advance stuff in Scala, 
 but now going back to it I found lots of gaps in my Scala part of the brain.
 
-There a lots of resources on the net, but for me this book is the best way to refresh my scala: 
+There are lots of resources on the net, but for me this book is the best way to refresh my scala: 
 [Seven Languages in Seven Weeks](http://pragprog.com/book/btlang/seven-languages-in-seven-weeks)
 
 Here I'll document the most helpful reminders...
@@ -48,5 +48,27 @@ class Person(firstName: String) {
         println("Inner constructor") 
     }
     def talk() = println("Hi") 
+}
+
+// static elements - use singleton objects
+object Person{
+    def staticMethod = println("i'm static")
+}
+
+Person.staticMethod()
+```
+
+## Inheritance
+```scala
+class Person(val name: String) {
+    def talk(message: String) = println(name + " says " + message) 
+    def id(): String = name
+}
+
+class Employee(override val name: String, val number: Int) extends Person(name) {
+    override def talk(message: String) {
+        println(name + " with number " + number + " says " + message)
+    }
+    override def id():String = number.toString 
 }
 ```
