@@ -15,11 +15,38 @@ There a lots of resources on the net, but for me this book is the best way to re
 
 Here I'll document the most helpful reminders...
 
-- ranges
+## ranges
     
-    ```scala
-    scala> val inclusiveRange = 0 to 10
-    scala> val range = 0 until 10
-    ```
+```scala
+scala> val inclusiveRange = 0 to 10
+scala> val range = 0 until 10
+```
 
-- for loop using range
+for loop using range: `for(i <- 0 until args.length)`
+
+## tuples
+
+```scala
+val person = ("Elvis", "Presley")
+person._1
+person._2
+
+val (first, last) =  ("Elvis", "Presley")
+```
+
+## classes
+
+```scala
+class Person(firstName: String, lastName: String)
+val gump = new Person("Forrest", "Gump")
+
+// Constructors
+class Person(firstName: String) {
+    println("Outer constructor")
+    def this(firstName: String, lastName: String) {
+        this(firstName)
+        println("Inner constructor") 
+    }
+    def talk() = println("Hi") 
+}
+```
