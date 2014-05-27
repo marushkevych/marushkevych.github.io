@@ -59,6 +59,7 @@ Person.staticMethod()
 ```
 
 ## Inheritance
+
 ```scala
 class Person(val name: String) {
     def talk(message: String) = println(name + " says " + message) 
@@ -72,3 +73,19 @@ class Employee(override val name: String, val number: Int) extends Person(name) 
     override def id():String = number.toString 
 }
 ```
+
+## traits
+
+```scala
+class Person(val name:String)
+trait Nice {
+    def greet() = println("Howdily doodily.")
+}
+class Character(override val name:String) extends Person(name) with Nice
+val flanders = new Character("Ned") 
+flanders.greet
+
+// or extend trait directly:
+class Person(val name: String) extends Nice
+```
+
