@@ -51,11 +51,26 @@ class Person(firstName: String) {
 }
 
 // static elements - use singleton objects
-object Person{
+object Person {
     def staticMethod = println("i'm static")
 }
 
 Person.staticMethod()
+```
+
+## companion object factory
+
+```scala
+class Person(firstName: String, lastName: String)
+
+object Person {
+    def apply(fullName: String){
+        new Person(parseFirstName(fullName), parseLastName(fullName)
+    }
+}
+
+val person = Person("Elvis Presley");
+
 ```
 
 ## Inheritance
