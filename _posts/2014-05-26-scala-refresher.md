@@ -10,8 +10,10 @@ Scala is one of those languages (for me at least) that need constant use in orde
 I completed "Functional programming in Scala" course more then year ago, doing pretty advance stuff in Scala, 
 but now going back to it I found lots of gaps in my Scala part of the brain.
 
-There are lots of resources on the net, but for me this book is the best way to refresh my scala: 
+There are lots of resources on the net, but for me this book is the best way to refresh my Scala: 
 [Seven Languages in Seven Weeks](http://pragprog.com/book/btlang/seven-languages-in-seven-weeks)
+
+Official Scala [cheatsheet](http://docs.scala-lang.org/cheatsheets/) is very complete and concise.
 
 Here I'll document the most helpful reminders...
 
