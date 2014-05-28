@@ -17,6 +17,16 @@ Official Scala [cheatsheet](http://docs.scala-lang.org/cheatsheets/) is very com
 
 Here I'll document the most helpful reminders...
 
+## Pattern Matching Anonymous Functions
+
+```scala
+val b = List(1, 2)
+b map {
+    case 1 => "one"
+    case 2 => "two"
+}
+```
+
 ## ranges
     
 ```scala
