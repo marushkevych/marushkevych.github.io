@@ -30,24 +30,25 @@ b map {
 ## Anonymous Functions as blocks
 
 ```scala
-def myMethod(value:File,x: (File) => Unit) = {
-   // Some processing here
-   x(value)
-}
+def myMethod(x: String => Unit) = x("foo")
 
-myMethod(new File("c:/"), x => { 
-  if (x.toString.endsWith(".txt")) {
-    println(x) 
-  }
-})
+myMethod { s =>
+	println("printing " + s)
+} 
 
-// An alternative is way to define myMethod as a curried function
-def myMethod(value: File)(x: File => Unit) = x(value)
+// If there are more argument need  to use parents
+def myMethod(s: String, x: String => Unit) = x(s)
 
-myMethod(new File("c:/")) { x => 
-  if (x.toString.endsWith(".txt")) {
-    println(x) 
-  }
+myMethod( "foo", s => {
+	println("printing " + s)
+}) 
+	
+
+// An alternative is to define myMethod as a curried function
+def myMethod(s: String)( x: String => Unit) = x(s)
+
+myMethod( "foo") { s =>
+	println("printing " + s)
 }
 
 ```
