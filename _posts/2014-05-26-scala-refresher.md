@@ -27,6 +27,32 @@ b map {
 }
 ```
 
+## Anonymous Functions as blocks
+
+```scla
+
+def myMethod(value:File,x: (a:File) => Unit) = {
+   // Some processing here
+   x(value)
+}
+
+myMethod(new File("c:/"), x => { 
+  if (x.toString.endsWith(".txt")) {
+    println(x) 
+  }
+})
+
+// An alternative is way to define myMethod as a curried function
+def myMethod(value: File)(x: File => Unit) = x(value)
+
+myMethod(new File("c:/")) { x => 
+  if (x.toString.endsWith(".txt")) {
+    println(x) 
+  }
+}
+
+```
+
 ## ranges
     
 ```scala
