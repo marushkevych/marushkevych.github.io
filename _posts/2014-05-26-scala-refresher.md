@@ -15,6 +15,8 @@ There are lots of resources on the net, but for me this book is the best way to 
 
 Official Scala [cheatsheet](http://docs.scala-lang.org/cheatsheets/) is very complete and concise.
 
+[Method Invocation guide](http://docs.scala-lang.org/style/method-invocation.html) is very useful too.
+
 Here I'll document the most helpful reminders...
 
 ## Pattern Matching Anonymous Functions
