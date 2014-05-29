@@ -29,8 +29,7 @@ b map {
 
 ## Anonymous Functions as blocks
 
-```scla
-
+```scala
 def myMethod(value:File,x: (a:File) => Unit) = {
    // Some processing here
    x(value)
