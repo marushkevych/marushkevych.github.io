@@ -30,7 +30,7 @@ b map {
 ## Anonymous Functions as blocks
 
 ```scala
-def myMethod(value:File,x: (a:File) => Unit) = {
+def myMethod(value:File,x: (File) => Unit) = {
    // Some processing here
    x(value)
 }
