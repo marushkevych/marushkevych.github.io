@@ -33,22 +33,22 @@ b map {
 def myMethod(x: String => Unit) = x("foo")
 
 myMethod { s =>
-	println("printing " + s)
+  println("printing " + s)
 } 
 
 // If there are more argument need  to use parents
 def myMethod(s: String, x: String => Unit) = x(s)
 
-myMethod( "foo", s => {
-	println("printing " + s)
+myMethod("foo", s => {
+  println("printing " + s)
 }) 
 	
 
 // An alternative is to define myMethod as a curried function
 def myMethod(s: String)( x: String => Unit) = x(s)
 
-myMethod( "foo") { s =>
-	println("printing " + s)
+myMethod("foo") { s =>
+  println("printing " + s)
 }
 
 ```
@@ -56,8 +56,9 @@ myMethod( "foo") { s =>
 ## ranges
     
 ```scala
-scala> val inclusiveRange = 0 to 10
-scala> val range = 0 until 10
+val inclusiveRange = 0 to 9
+// is same as
+val range = 0 until 10
 ```
 
 for loop using range: `for(i <- 0 until args.length)`
