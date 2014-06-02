@@ -17,6 +17,9 @@ Official Scala [cheatsheet](http://docs.scala-lang.org/cheatsheets/) is very com
 
 [Method Invocation guide](http://docs.scala-lang.org/style/method-invocation.html) is very useful too.
 
+[Here](http://blog.bruchez.name/2011/10/scala-partial-functions-without-phd.html) is great post on partial functions 
+and pattern matching.
+
 Here I'll document the most helpful reminders...
 
 ## Pattern Matching Anonymous Functions
