@@ -2,7 +2,7 @@
 layout: post
 title:  "Browserify"
 date:   2014-03-14 17:00:00
-categories: angularjs
+categories: angularjs browserify
 ---
 
 Last few days I was trying to come up with easiest way to manage packages and dependencies in AngularJS projects. 
