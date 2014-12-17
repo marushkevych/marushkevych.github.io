@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Handling angularjs html5Mode with grunt connect
-date:   2014-03-27 1:00:00
+date:   2014-03-26 1:00:00
 categories: angularjs
 ---
 
