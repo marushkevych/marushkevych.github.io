@@ -1,0 +1,17 @@
+---
+layout: post
+title:  Running Angular app with beefy
+tagline:  
+date:   2014-12-16 23:00:00
+categories: angularjs browserify
+---
+
+Just discovered [beefy](http://didact.us/beefy) - great way to run your browserify app for development.
+
+Very pleasant surprise is that beefy will replace any not existing resource with default index.html - great for single page apps. And it works great for angular apps with html5Mode enabled. So, instead of using [cumbersome regexp in connect modRewrite](/2014/03/26/angular-html5mode-refresh), you can run your app with beefy: 
+
+```
+beefy js/app.js:dist/bundle.js --index=index.html
+```
+
+We are telling beefy to dynamically bundle our app starting from js/app.js, and use this bundle whenever  ```<script src="/dist/bundle.js"></script>``` is requested. Also we telign beefy to use index.html whenever unexising asset is requested - this will take care of browser refreshes and direct navigation with html5Mode.
