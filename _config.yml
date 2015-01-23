@@ -11,8 +11,8 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : notes to self
-tagline: on software development and tech stuff...
+title : undefined is not a function
+tagline: notes of javascript junkie
 
 description: A personal site and blog of Andrey Marushkevych. Notes on sofware development and technology, java, javascript, nodejs, angularjs.
 
