@@ -6,10 +6,10 @@ title: Projects
 ## Here are some of my projects, developed for fun outside of my work.
 
 
-#### libraries and components
+### libraries and components
 
-- [xml-display-component]
-  - Render xml as expandable tree using ultrafast React.js
+#### [xml-display-component]
+Render xml as expandable tree using ultrafast React.js
 
 - [request-promise-json]
   - Simple JSON API with 'q' promises on top of amazing 'request' module.
