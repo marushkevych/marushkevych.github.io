@@ -6,7 +6,7 @@ title: Projects
 Here are some of my projects, developed for fun outside of my work.
 
 
-## libraries and components
+## Libraries and components
 
 #### [xml-display-component]
 Render xml as expandable tree using ultrafast React.js
