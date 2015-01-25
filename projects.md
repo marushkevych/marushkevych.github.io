@@ -3,9 +3,9 @@ layout: page
 title: Projects
 ---
 
-#### Here are some of my projects, developed for fun outside of my work.
+## Here are some of my projects, developed for fun outside of my work.
 
-### libraries and components
+#### libraries and components
 
 - [xml-display-component]
   - Render xml as expandable tree using ultrafast React.js
@@ -17,9 +17,22 @@ title: Projects
   - grunt plugin to sync files and folders with CMIS repository
 
 
-### Just for fun
+#### Just for fun
+
+- [game-grid]
+  - Reusable grid model and grid canvas view for 2D board games.
+
+- [game-of-life]
+  - Implementation of Conway's Game of Life using [game-grid]
+
+- [snake]
+  - implementation of Snake game using [game-grid]
+
 
 
 [xml-display-component]: https://github.com/marushkevych/xml-display-component
 [request-promise-json]: https://github.com/marushkevych/request-promise-json
 [grunt-cmiscopy]: https://www.npmjs.com/package/grunt-cmiscopy
+[game-grid]: https://github.com/marushkevych/game-grid
+[game-of-life]: http://www.marushkevych.com/game-of-life/
+[snake]: http://www.marushkevych.com/snake/
