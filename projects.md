@@ -32,8 +32,8 @@ implementation of Snake game using [game-grid]
 
 
 [xml-display-component]: https://github.com/marushkevych/xml-display-component
-[request-promise-json]: https://github.com/marushkevych/request-promise-json
+[request-promise-json]: https://www.npmjs.com/package/request-promise-json
 [grunt-cmiscopy]: https://www.npmjs.com/package/grunt-cmiscopy
-[game-grid]: https://github.com/marushkevych/game-grid
+[game-grid]: https://www.npmjs.com/package/game-grid
 [game-of-life]: http://www.marushkevych.com/game-of-life/
 [snake]: http://www.marushkevych.com/snake/
