@@ -5,6 +5,7 @@ title: Projects
 
 ## Here are some of my projects, developed for fun outside of my work.
 
+
 #### libraries and components
 
 - [xml-display-component]
