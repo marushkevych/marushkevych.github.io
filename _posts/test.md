@@ -16,5 +16,3 @@ foo
 wer
 wer
 wer
-
-
