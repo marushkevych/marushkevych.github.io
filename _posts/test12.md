@@ -1,2 +1,4 @@
 new page
 foo
+
+bar
