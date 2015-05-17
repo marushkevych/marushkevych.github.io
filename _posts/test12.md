@@ -1,4 +1,0 @@
-new page
-foo
-
-bar
