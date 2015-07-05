@@ -45,7 +45,7 @@ should be refactored to TypeScript:
 ```js
 import util = require("someUtil");
 
-export = MyService;
+export = MyService;
 
 function MyService(){
     util.doSomething();
@@ -57,19 +57,19 @@ function MyService(){
 If you use `$inject` property on a function object to declare names of injected values:
 
 ```js
-module.exports = AvailableOffersCtrl;
+module.exports = MyController;
 
-AvailableOffersCtrl.$inject = ['CurrentCallService', 'LTC'];
+MyController.$inject = ['MyService'];
 
-function AvailableOffersCtrl(CurrentCallService, LTC) {
+function MyController(MyService) {
     // init controller
-} 
+}
 ```
 
 TypeScript will not like this and will complain with:
 
 ```
-Error TS2339: Property '$inject' does not exist on type '(CurrentCallService: any, LTC: any) => void'.
+Error TS2339: Property '$inject' does not exist on type '(MyService: any) => void'.
 ```
 
 The solution is to reference angular.d.ts type definition, which defines `$inject` property on `Function` type.
@@ -79,13 +79,12 @@ Note: type definition reference should be the very first line in your file:
 ```js
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
 'use strict';
-export = AvailableOffersCtrl;
 
-module.exports = AvailableOffersCtrl;
+export = MyController;
 
-AvailableOffersCtrl.$inject = ['CurrentCallService', 'LTC'];
+MyController.$inject = ['MyService'];
 
-function AvailableOffersCtrl(CurrentCallService, LTC) {
+function MyController(MyService) {
     // init controller
 }
 ```
