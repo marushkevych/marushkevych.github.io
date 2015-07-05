@@ -57,6 +57,8 @@ function MyService(){
 If you use `$inject` property on a function object to declare names of injected values:
 
 ```js
+'use strict';
+
 module.exports = MyController;
 
 MyController.$inject = ['MyService'];
