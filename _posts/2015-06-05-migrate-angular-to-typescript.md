@@ -6,6 +6,10 @@ date:   2015-06-05 12:30:00
 categories: angularjs browserify typescript
 ---
 
+In order to  use typescript in your angular project you will need to
+* use `*.ts` extention
+* enable typescript transpiler plugin in browseify
+* refactor you code to be typescript friendly
 
 ## Configuring Browserify to transpile TypeScript
 
