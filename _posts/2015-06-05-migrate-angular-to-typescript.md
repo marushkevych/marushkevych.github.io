@@ -7,7 +7,7 @@ categories: angularjs browserify typescript
 ---
 
 
-# Configuring Browserify to transpile TypeScript
+## Configuring Browserify to transpile TypeScript
 
 To use Typescript transpiler with browserify just add [tsify](https://github.com/smrq/tsify) plugin to your grunt-browserify config:
 
