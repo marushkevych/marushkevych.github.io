@@ -24,12 +24,12 @@ browserify: {
 
 Now all the files with `*.ts` extension will be picked up by tsify plugin and ran through typescript compiler before included into browserify bundle. 
 
-# Necessary Refactoring to enable TypeScript
+## Necessary Refactoring to enable TypeScript
 
 *   modules syntax is different
 *   dependency injection with $inject, requires `$inject` property to be declared on Function type
 
-## Modules syntax
+### Modules syntax
 
 While Typescript is capable of using external node modules, it uses different module syntax, so the following code with common.js modules:
 
@@ -52,7 +52,7 @@ function MyService(){
 }
 ```
 
-## Dependency injection with $inject
+### Dependency injection with $inject
 
 If you use `$inject` property on a function object to declare names of injected values:
 
@@ -90,7 +90,7 @@ function AvailableOffersCtrl(CurrentCallService, LTC) {
 }
 ```
 
-# Conclusion 
+## Conclusion 
 
 If you are already using ES6 syntax in your app (with babel for example), you will have to make all you components typesript friendly:
 
