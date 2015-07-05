@@ -6,140 +6,78 @@ date:   2015-06-05 12:30:00
 categories: angularjs browserify typescript
 ---
 
-<div id="page">
-
-<div id="main" class="aui-page-panel">
-
-<div id="main-header">
-
-<div id="breadcrumb-section">
-
-1.  <span>[Developers](index.html)</span>
-2.  <span>[Developers Home](Developers-Home_26640409.html)</span>
-
-</div>
-
-# <span id="title-text">Developers : TypeScript with Browserify and Angular</span>
-
-</div>
-
-<div id="content" class="view">
-
-<div class="page-metadata">Created and last modified by <span class="author">amarushkevych</span> on Jun 23, 2015</div>
-
-<div id="main-content" class="wiki-content group">
 
 # Configuring Browserify to transpile TypeScript
 
 To use Typescript transpiler with browserify just add [tsify](https://github.com/smrq/tsify) plugin to your grunt-browserify config:
 
-<div class="code panel pdl" style="border-width: 1px;">
+```js
+browserify: {
+    dev: {
+        options: {
+            plugin: ['tsify']
+        }
+    }
+}
+```
 
-<div class="codeContent panelContent pdl">
-
-<pre class="theme: Confluence; brush: js; gutter: false" style="font-size:12px;">browserify: {
-	dev: {
-		options: {
-			plugin: ['tsify']
-		}
-	}
-}</pre>
-
-</div>
-
-</div>
 
 Now all the files with `*.ts` extension will be picked up by tsify plugin and ran through typescript compiler before included into browserify bundle. 
 
 # Necessary Refactoring to enable TypeScript
 
-To use Typescript with our angular projects requires quite a bit of refactoring:
-
 *   modules syntax is different
 *   dependency injection with $inject, requires `$inject` property to be declared on Function type
 
-## Modules <span>syntax</span>
+## Modules syntax
 
 While Typescript is capable of using external node modules, it uses different module syntax, so the following code with common.js modules:
 
-<div class="code panel pdl" style="border-width: 1px;">
-
-<div class="codeContent panelContent pdl">
-
-<pre class="theme: Confluence; brush: js; gutter: false" style="font-size:12px;">var util = require("someUtil");
+```js
+var util = require("someUtil");
 
 module.exports = function(){
-	util.doSomething();
-}</pre>
-
-</div>
-
-</div>
-
+    util.doSomething();
+}
+```
 should be refactored to TypeScript:
 
-<div class="code panel pdl" style="border-width: 1px;">
-
-<div class="codeContent panelContent pdl">
-
-<pre class="theme: Confluence; brush: js; gutter: false" style="font-size:12px;">import util = require("someUtil");
+```js
+import util = require("someUtil");
 
 export = MyService;
 
 function MyService(){
-	util.doSomething();
+    util.doSomething();
 }
-</pre>
+```
 
-</div>
+## Dependency injection with $inject
 
-</div>
+If you use `$inject` property on a function object to declare names of injected values:
 
-## <span>Dependency injection with </span>$inject
-
-We use `$inject` property on a function object to declare names of injected values.
-
-<span style="line-height: 1.4285715;">Here is an example of regular js controller with dependency injection:</span>
-
-<div class="code panel pdl" style="border-width: 1px;">
-
-<div class="codeContent panelContent pdl">
-
-<pre class="theme: Confluence; brush: js; gutter: false" style="font-size:12px;">'use strict';
-
+```js
 module.exports = AvailableOffersCtrl;
 
 AvailableOffersCtrl.$inject = ['CurrentCallService', 'LTC'];
 
 function AvailableOffersCtrl(CurrentCallService, LTC) {
-	// init controller
-} </pre>
+    // init controller
+} 
+```
 
-</div>
+TypeScript will not like this and will complain with:
 
-</div>
+```
+Error TS2339: Property '$inject' does not exist on type '(CurrentCallService: any, LTC: any) => void'.
+```
 
-Unfortunately TypeScript doesn't like this and compilation fails with:
+The solution is to reference angular.d.ts type definition, which defines `$inject` property on `Function` type.
 
-<div class="code panel pdl" style="border-width: 1px;">
+Note: type definition reference should be the very first line in your file:
 
-<div class="codeContent panelContent pdl">
-
-<pre class="theme: Confluence; brush: java; gutter: false" style="font-size:12px;">Error TS2339: Property '$inject' does not exist on type '(CurrentCallService: any, LTC: any) => void'.</pre>
-
-</div>
-
-</div>
-
-The solution is to referemce angular.d.ts type definition, which defines `$inject` property on `Function` type 
-
-So it should be refactored into a TypeScript class like this:
-
-<div class="code panel pdl" style="border-width: 1px;">
-
-<div class="codeContent panelContent pdl">
-
-<pre class="theme: Confluence; brush: js; gutter: false" style="font-size:12px;">/// <reference path="../../../typings/angularjs/angular.d.ts" />
+```js
+/// <reference path="../../../typings/angularjs/angular.d.ts" />
 'use strict';
 export = AvailableOffersCtrl;
 
@@ -148,38 +86,21 @@ module.exports = AvailableOffersCtrl;
 AvailableOffersCtrl.$inject = ['CurrentCallService', 'LTC'];
 
 function AvailableOffersCtrl(CurrentCallService, LTC) {
-	// init controller
+    // init controller
 }
-</pre>
-
-</div>
-
-</div>
+```
 
 # Conclusion 
 
-Unfortunately its impossible to simply switch from Babeljs to TypeScript, since all the files that using ES6 features
+If you are already using ES6 syntax in your app (with babel for example), you will have to make all you components typesript friendly:
 
 *   need to be renamed to have *.ts extension
 *   need to be refactored to use TypeScript modules syntax
 *   need to reference `angular.d.ts` to enable `$inject` property in functions.
 
-Migrating vanilla js projects to TypeScript, on the other hand, should be pretty painless. We can just do the above refactoring gradually, file by file.
+But Migrating es5 js projects to TypeScript, on the other hand, should be pretty painless. We can just do the above refactoring gradually, file by file.
 
-</div>
 
-</div>
 
-</div>
 
-<div id="footer">
 
-<section class="footer-body">
-
-Document generated by Confluence on Jul 05, 2015 12:21
-
-</section>
-
-</div>
-
-</div>
