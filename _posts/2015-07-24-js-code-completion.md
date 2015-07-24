@@ -12,7 +12,7 @@ First there was TypeScript, then knockout.js, and now [Visual Studio Code](https
 VS Code text editor is actually pretty slick and if you using TypeScript you get great support from the editor like code completion, which is great for discovering API (third party or your own).
 
 But, how can you get advantage of this without switching to TypeScript? 
-VS Code lets you reference type definitions for any third party library in your js code, and you can get code completion even in your JS:
+VS Code lets you reference type definitions for any third party library in your js code:
 
 ```js
 /// <reference path="../../../typings/angularjs/angular.d.ts" />
