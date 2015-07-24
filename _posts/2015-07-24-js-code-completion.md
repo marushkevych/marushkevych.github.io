@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Enable Code Completion For your Service API
+title:  Enable Code Completion For your javascript
 tagline:  
 date:   2015-07-24 12:30:00
 categories: javascript angularjs typescript 
