@@ -3,8 +3,6 @@
 
 permalink: /:year/:month/:day/:title 
 
-markdown: redcarpet
-
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "nbproject"]
 pygments: true
 
