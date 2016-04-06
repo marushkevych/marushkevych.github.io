@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title:  Enable Code Completion in your javascript
 tagline:  
 date:   2015-07-24 12:30:00
