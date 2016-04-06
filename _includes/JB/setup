@@ -13,6 +13,7 @@
       {% assign HOME_PATH = "/" %}
     {% endif %}
 
-    {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{{ page.theme.name }}{% endcapture %}
+    {% assign ASSET_PATH = {{ BASE_PATH }}/assets/themes/{{ page.theme.name }} %}
+   
   {% endif %}
 {% endcapture %}{% assign jbcache = nil %}
