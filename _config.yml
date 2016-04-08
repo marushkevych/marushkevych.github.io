@@ -10,7 +10,7 @@ exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "
 # so be sure to set them if your theme uses them.
 #
 title : undefined is not a function
-tagline: notes of javascript junkie
+tagline: notes of a javascript junkie
 
 description: A personal site and blog of Andrey Marushkevych. Notes on sofware development and technology, java, javascript, nodejs, angularjs.
 
