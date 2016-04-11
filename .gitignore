@@ -1,5 +1,4 @@
-/nbproject/private/
-/_site/nbproject/private/
-/_site/
-/nbproject/
+_site
+node_modules
+Gemfile.lock
 .DS_Store
