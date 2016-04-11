@@ -55,6 +55,7 @@ hr.small {
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
+  font-size: 15px;
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
