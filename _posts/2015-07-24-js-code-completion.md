@@ -4,7 +4,7 @@ title:  Enable Code Completion in your javascript
 subtitle:  
 date:   2015-07-24 12:30:00
 categories: javascript angularjs typescript 
-header-img: "img/post-bg-03.jpg"
+header-img: "img/IMG_8383.jpg"
 ---
 
 
