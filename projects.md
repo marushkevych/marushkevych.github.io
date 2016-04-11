@@ -2,7 +2,7 @@
 layout: page
 title: Projects
 description: "Here are some of my projects, developed for fun outside of my work."
-header-img: "img/IMG_8692.jpg"
+header-img: "img/IMG_8692.JPG"
 ---
 
 
