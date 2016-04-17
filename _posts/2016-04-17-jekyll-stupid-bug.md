@@ -36,6 +36,6 @@ Anyway... The workaround it to not use time portion of the date metadata: `date:
 
 ```yml
 # this is needed to fix stupid bug - jekyll generated post url from post metadata using local timezone
-# so if you set you might get link generated day later or earlier!
+# so if you provide time portion of the date, you might get link generated day later or earlier!
 timezone: UTC
 ```
