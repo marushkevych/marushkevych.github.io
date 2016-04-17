@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Jekyll's stupid permalink date bug
+title:  Jekyll has stupid permalink date bug
 subtitle:  but they think its a feature?!
 date:   2016-04-17
 categories: jekyll 
