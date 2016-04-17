@@ -35,7 +35,6 @@ Yes, if your local time is not UTC, Jekyll will convert specified time to local 
 Anyway... The workaround it to not use time portion of the date metadata: `date:   2015-07-24`, or tell Jekyll that your local time is UTC in your  `config.yml`:
 
 ```yml
-# this is needed to fix stupid bug - jekyll generated post url from post metadata using local timezone
-# so if you provide time portion of the date, you might get link generated day later or earlier!
+# this is needed to fix stupid bug - jekyll generated post url from post metadata using local timezone. So if you provide time portion of the date, you might get link generated day later or earlier!
 timezone: UTC
 ```
