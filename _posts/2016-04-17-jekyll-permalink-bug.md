@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Beware of Jekyll's permalink bug
-subtitle:  and not, it's not a feature!
+subtitle:  and no, it's not a feature!
 date:   2016-04-17
 categories: jekyll 
 header-img: "img/IMG_8383.JPG"
