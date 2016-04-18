@@ -11,6 +11,7 @@ Yes, it's been a while, but I'm back. I was completely consumed by the work in a
 Now that I'm back to sane client-side JS and good old angular, I can take a moment to reflect on my experience with Meteor.
 
 Meteor is amazing! 
+
 - Full stack JS
 - Tracker (genius idea!)
 - [DDP](https://www.meteor.com/ddp)
@@ -19,6 +20,7 @@ Meteor is amazing!
 - Observing DB changes (mongo)
 
 But there are few challenges with Meter (and some are really annoying):
+
 - global namespace
 - proprietary packaging system (as opposed to NPM) 
 - no unit-testing infrastructure
