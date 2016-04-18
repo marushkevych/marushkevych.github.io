@@ -20,7 +20,7 @@ Meteor is amazing!
 - Code reuse across client and server
 - Observing DB changes (mongo)
 
-But there are few challenges with Meter (and some are really annoying):
+But there are few challenges with Meteor (and some are really annoying):
 
 - global namespace
 - proprietary packaging system (as opposed to NPM) 
