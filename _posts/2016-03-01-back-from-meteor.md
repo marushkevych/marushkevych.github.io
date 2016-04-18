@@ -4,6 +4,7 @@ title:  Meteor was great
 subtitle: but I'm back to Earth
 date:   2016-03-01
 categories: meteor blaze
+header-img: "img/IMG_8383.JPG"
 ---
 
 Yes, it's been a while, but I'm back. I was completely consumed by the work in a startup called Onist, where I was doing full-stack JS using Meteor, Node and Redis.

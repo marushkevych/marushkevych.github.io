@@ -4,6 +4,7 @@ title:  Beware of Jekyll's permalink bug
 subtitle:  and not, it's not a feature!
 date:   2016-04-17
 categories: jekyll 
+header-img: "img/IMG_8383.JPG"
 ---
 
 Jekyll generates permanent links to your posts using date provided in post metadata.
