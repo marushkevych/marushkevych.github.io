@@ -28,9 +28,9 @@ But there are few challenges with Meteor (and some are really annoying):
 - blaze framework
 - hard to control reactive updates
 
-(Some of it are changing as we speak, which is great...)
+(Some are changing as we speak, which is great...)
 
-Lets look into some of these...
+Lets have are closer look...
 
 ### Global namespace
 
@@ -46,7 +46,7 @@ This is probably the most annoying thing about Meteor. Its actually unbelievable
 
 ### Blaze UI framework
 
-Blaze is pretty powerful, very flexible and lets you build UI with reusable components very fast. Unfortunately as the hierarchy of blaze components grow, its really hard to understand whats going on especially given the reactive nature of Meteor. Blaze API is also very confusing with a lot of different ways to do the same thing. And some simple things are hard to do, like sharing state across components. Fortunately Blaze is being replaced with more mature alternatives like React or Angular.  
+Blaze is pretty powerful, very flexible and lets you build UI with reusable components very fast. Unfortunately as the hierarchy of blaze components grows, its really hard to understand whats going on, especially given the reactive nature of Meteor. Blaze API is also very confusing with a lot of different ways to do the same thing. And some simple things are hard to do, like sharing state across components. Fortunately Blaze is being replaced with more mature alternatives like React or Angular.  
 
 ### Hard to control reactive updates
 
