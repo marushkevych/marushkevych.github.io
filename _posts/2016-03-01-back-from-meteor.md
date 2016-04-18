@@ -13,7 +13,7 @@ Now that I'm back to RESTfull APIs, sane client-side JS and good old angular, I 
 Meteor is amazing! 
 
 - Full stack JS
-- Tracker (genius idea!)
+- [Tracker](https://www.meteor.com/tracker) (genius idea!)
 - [DDP](https://www.meteor.com/ddp)
 - Fibers on the server
 - Code reuse across client and server
