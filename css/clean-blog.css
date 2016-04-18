@@ -58,6 +58,7 @@ hr.small {
   font-size: 15px;
 }
 .navbar-custom .nav li a {
+  text-decoration: none;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 800;
