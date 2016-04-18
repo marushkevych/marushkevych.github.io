@@ -37,7 +37,7 @@ Well, there is not much to say bout this. Its just bad. First of all, it forces 
 
 ### NPM
 
-While its possible to use NPM with meteor, its really cumbersome, and meteor's own packaging is nothing like NPM. Meteor's own package repository (https://atmospherejs.com) hosts adopted versions of some NPM packages, but they are always few versions behind. Fortunately MDG has recognized this (after long and continuous resistance), and NPM will be supported as a first class citizen.
+While its possible to use NPM with meteor, its really cumbersome, and meteor's own packaging is nothing like NPM. Meteor's own [package repository](https://atmospherejs.com) hosts adopted versions of some NPM packages, but they are always few versions behind. Fortunately MDG has recognized this (after long and continuous resistance), and NPM will be supported as a first class citizen.
 
 ### No unit-testing infrastructure
  
