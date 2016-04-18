@@ -8,7 +8,7 @@ categories: meteor blaze
 
 Yes, it's been a while, but I'm back. I was completely consumed by the work in a startup called Onist, where I was doing full-stack JS using Meteor, Node and Redis.
 
-Now that I'm back to sane client-side JS and good old angular, I can take a moment to reflect on my experience with Meteor.
+Now that I'm back to RESTfull APIs, sane client-side JS and good old angular, I can take a moment to reflect on my experience with Meteor.
 
 Meteor is amazing! 
 
