@@ -13,10 +13,10 @@ timezone: UTC
 
 url: "http://marushkevych.com"
 #twitter_username: marushkevych
-github_username:  marushkevych
-email_username:  marushkevych@gmail.com
-linkedin_username: andrey-marushkevych-9601007
-stack_exchange_username: 454839
+#github_username:  marushkevych
+#email_username:  marushkevych@gmail.com
+#linkedin_username: andrey-marushkevych-9601007
+#stack_exchange_username: 454839
 
 # Build settings
 markdown: kramdown
